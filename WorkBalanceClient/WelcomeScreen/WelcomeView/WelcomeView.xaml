@@ -1,0 +1,48 @@
+﻿<Window x:Class="WelcomeScreen.WelcomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" AllowsTransparency="True" Background="Transparent" Topmost="True" 
+             WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" ShowInTaskbar="False"
+        Height="400" Width="600" WindowState="Maximized">
+    <Window.Resources>
+        <BitmapImage UriSource="../Images/osmc.png" x:Key="SplashScreen" />
+    </Window.Resources>
+    <Grid Background="Transparent">
+        <Image Source="{StaticResource SplashScreen}" VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="None" Opacity="0.6" >
+            <Image.Effect>
+                <DropShadowEffect BlurRadius="10" Opacity="1" ShadowDepth="1" Color="White" />
+            </Image.Effect>
+        </Image>
+        <StackPanel Width="500" Height="50" Margin="0,-45,0,0">
+            <TextBlock Text="Work Balance" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="WhiteSmoke" FontSize="36" FontFamily="Segoe UI" FontWeight="Black" />
+        </StackPanel>
+        <StackPanel Margin="0,50,0,0" Width="500" Height="30" >
+            <TextBlock Text="{Binding CurrentStep}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="WhiteSmoke" FontWeight="Bold"  FontSize="18" FontFamily="Segoe UI" />
+        </StackPanel>
+        <StackPanel Width="500" Height="30" Margin="0,170,0,0" >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel.Resources>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Width" Value="35" />
+                        <Setter Property="Foreground" Value="#FFC8C8C8" />
+                        <Setter Property="Text" Value="●" />
+                        <Setter Property="FontSize" Value="20" />
+                        <Setter Property="FontFamily" Value="Segoe UI" />
+                        <Setter Property="TextAlignment" Value="Center" />
+                    </Style>
+                </StackPanel.Resources>
+                <TextBlock x:Name="P1" Visibility="Hidden" />
+                <TextBlock x:Name="P2" Visibility="Hidden" />
+                <TextBlock x:Name="P3" Visibility="Hidden" />
+                <TextBlock x:Name="P4" Visibility="Hidden" />
+                <TextBlock x:Name="P5" Visibility="Hidden" />
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="35,0,0,35" VerticalAlignment="Bottom" HorizontalAlignment="Left" Orientation="Horizontal">
+            <TextBlock Text="Version: " VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="WhiteSmoke" FontSize="12" FontFamily="Segoe UI" />
+            <TextBlock Text="{Binding Version}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="WhiteSmoke" FontSize="12" FontFamily="Segoe UI" />
+        </StackPanel>
+    </Grid>
+</Window>

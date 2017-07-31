@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WorkBalanceClient.Resources">
+
+    <!--Colors-->
+    <Color x:Key="PrimaryColor">#FF1891D9</Color>
+    <Color x:Key="PrimaryColorLigth">#FF68B7E5</Color>
+    <Color x:Key="PrimaryColorDark">#FF045A8D</Color>
+    <Color x:Key="AccentColor">#FFFFA01C</Color>
+    <Color x:Key="PaperColor">#FFFFFFFF</Color>
+    <Color x:Key="BackgroundColor">#FFF5F5F5</Color>
+    <Color x:Key="TextColor">#FF111111</Color>
+    <Color x:Key="DisabledTextColor">#77111111</Color>
+    <Color x:Key="LVSControlBorderColor">#FF666666</Color>
+    <Color x:Key="LVSControlDiasabledColor">#EE888888</Color>
+    <Color x:Key="LVSActionControlDisabledColor">#99777777</Color>
+    <Color x:Key="LVSListelementHighlightedColor">#BBDFDFDF</Color>
+    <Color x:Key="LVSListelementMouseOverColor">#FFB9B9B9</Color>
+    <Color x:Key="MaterialDesignShadow">#AA000000</Color>
+    
+</ResourceDictionary>
